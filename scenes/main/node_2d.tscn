@@ -1,14 +1,23 @@
-[gd_scene format=3 uid="uid://44jjrcqr5ljm"]
+[gd_scene format=3 uid="uid://bp3qu4lkl1x4i"]
 
-[ext_resource type="Script" uid="uid://cg0efdobj3f5c" path="res://scripts/Test.cs" id="1_wwqha"]
-[ext_resource type="Script" uid="uid://d0bccpwd2mx3d" path="res://scripts/main/NewScript.cs" id="2_noowk"]
+[sub_resource type="CSharpScript" id="CSharpScript_eusfw"]
+script/source = "using Godot;
+using System;
 
-[node name="Node2D" type="Node2D" unique_id=97902372]
-position = Vector2(587, 399)
-script = ExtResource("1_wwqha")
+public partial class Node2d : Node2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+		GD.Print(\"How tiresome\");
+	}
 
-[node name="Polygon2D" type="Polygon2D" parent="." unique_id=442216149]
-script = ExtResource("2_noowk")
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
 
-[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=2079603950]
-script = ExtResource("1_wwqha")
+[node name="Node2D" type="Node2D" unique_id=322347813]
+script = SubResource("CSharpScript_eusfw")
