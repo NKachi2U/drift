@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Drift"
-run/main_scene="uid://bp3qu4lkl1x4i"
+run/main_scene="uid://dy3uqi0lkfhoe"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
