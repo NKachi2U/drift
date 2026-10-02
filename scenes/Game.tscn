@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dacvauiqincnp"]
+
+[ext_resource type="Texture2D" uid="uid://b0iqhu453142o" path="res://icon.svg" id="1_ibkli"]
+
+[node name="Game" type="Control" unique_id=668591372]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=765055246]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.665863, 16.29336)
+texture = ExtResource("1_ibkli")
+expand_mode = 1
+
+[node name="Character" type="Control" parent="." unique_id=23722726]
+anchors_preset = 0
+offset_left = 41.0
+offset_top = 474.0
+offset_right = 81.0
+offset_bottom = 514.0
+scale = Vector2(3.680799, 3.5477355)
+
+[node name="TextureRect" type="TextureRect" parent="Character" unique_id=304489708]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ibkli")
+expand_mode = 1
