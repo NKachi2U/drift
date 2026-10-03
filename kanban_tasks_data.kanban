@@ -1,0 +1,203 @@
+{
+	"categories": [
+		{
+			"uuid": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "b2a6367c-ae00-48bb-8a18-3ffed0615fcb",
+			"title": "Todo",
+			"tasks": [
+				"2d9208f7-837f-42af-9128-b15d6c4cc0ec",
+				"daaa7ddc-7df5-42d8-b1d6-010976967ebd",
+				"de7af974-7472-4a79-9a46-ca5d8dee60a3",
+				"1ee1209d-4685-4f27-a94b-376ed1ee0d23",
+				"77c53a52-4448-473c-8aa9-0f5e4c640e23",
+				"89fe60c4-0cdf-4e72-b65b-7b73a45d8f05",
+				"67919252-d0c1-41ff-b2fe-ae027526789d",
+				"78b01572-2ad5-4264-b4b3-2076988057e3",
+				"6c1ea4af-fb43-4d5c-8fa9-f836c7f52662",
+				"4df6fd30-55ce-43ce-98aa-bcdf26a3eb20",
+				"5ad76c63-64e9-42fd-b1a0-8e0e1c0d8af7",
+				"3400b66b-471c-4e50-8857-db3f6389e427",
+				"eda4085c-ce00-4c76-b7cd-9ff1e2dba5dd",
+				"61b52ace-73d2-4a38-b8ff-59c70a7c8525",
+				"50474934-5944-4183-8ac8-046254f7c7f8",
+				"6459bc0d-19c0-4f0f-b57f-83997af56768",
+				"2d012fa4-f72b-4de4-a0e6-bf5e0d9eb12a",
+				"86bb4ab8-4644-4097-b925-af302483193a"
+			]
+		},
+		{
+			"uuid": "ece108be-f496-4f3d-af7e-98fb817b69ba",
+			"title": "Doing",
+			"tasks": [
+				"a56c1394-d35b-4b91-86d0-f4567884f199",
+				"98fceeab-c129-4348-a126-c242d8c9bd88"
+			]
+		},
+		{
+			"uuid": "a23324c0-3a1e-429a-9a64-583c994cf4c7",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "a56c1394-d35b-4b91-86d0-f4567884f199",
+			"title": "Dialogue",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "2d9208f7-837f-42af-9128-b15d6c4cc0ec",
+			"title": "Speakers",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "daaa7ddc-7df5-42d8-b1d6-010976967ebd",
+			"title": "Choices",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "de7af974-7472-4a79-9a46-ca5d8dee60a3",
+			"title": "Branching?",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "1ee1209d-4685-4f27-a94b-376ed1ee0d23",
+			"title": "Encounters",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "77c53a52-4448-473c-8aa9-0f5e4c640e23",
+			"title": "Card Data",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "89fe60c4-0cdf-4e72-b65b-7b73a45d8f05",
+			"title": "Drawing Cards",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "67919252-d0c1-41ff-b2fe-ae027526789d",
+			"title": "Hand/Deck",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "78b01572-2ad5-4264-b4b3-2076988057e3",
+			"title": "Card select",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "6c1ea4af-fb43-4d5c-8fa9-f836c7f52662",
+			"title": "Card FX",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "4df6fd30-55ce-43ce-98aa-bcdf26a3eb20",
+			"title": "Win/Lose",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "5ad76c63-64e9-42fd-b1a0-8e0e1c0d8af7",
+			"title": "Return result",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "98fceeab-c129-4348-a126-c242d8c9bd88",
+			"title": "Main menu",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "3400b66b-471c-4e50-8857-db3f6389e427",
+			"title": "Card-game UI",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "eda4085c-ce00-4c76-b7cd-9ff1e2dba5dd",
+			"title": "Novel UI",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "61b52ace-73d2-4a38-b8ff-59c70a7c8525",
+			"title": "Background Switching",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "50474934-5944-4183-8ac8-046254f7c7f8",
+			"title": "Transitions",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "6459bc0d-19c0-4f0f-b57f-83997af56768",
+			"title": "Music/sfx hooks",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "2d012fa4-f72b-4de4-a0e6-bf5e0d9eb12a",
+			"title": "Connecting VN and card-game scene",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		},
+		{
+			"uuid": "86bb4ab8-4644-4097-b925-af302483193a",
+			"title": "New task",
+			"description": "",
+			"category": "9d2fbdfd-33fc-40b0-a1e8-3e925fd06c84",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"b2a6367c-ae00-48bb-8a18-3ffed0615fcb"
+			],
+			[
+				"ece108be-f496-4f3d-af7e-98fb817b69ba"
+			],
+			[
+				"a23324c0-3a1e-429a-9a64-583c994cf4c7"
+			]
+		]
+	}
+}
