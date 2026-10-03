@@ -19,6 +19,11 @@ config/icon="res://icon.svg"
 
 DialogueManager="*uid://c3rodes2l3gxb"
 
+[dialogue_manager]
+
+runtime/balloon_path="res://assets/Balloon.tscn"
+runtime/advanced/uses_dotnet=true
+
 [display]
 
 window/stretch/mode="canvas_items"

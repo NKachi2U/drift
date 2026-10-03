@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dacvauiqincnp"]
 
 [ext_resource type="Texture2D" uid="uid://b0iqhu453142o" path="res://icon.svg" id="1_ibkli"]
+[ext_resource type="Script" uid="uid://2yn4y7kngsow" path="res://scripts/GameStart.gd" id="1_qbsmt"]
 
 [node name="Game" type="Control" unique_id=668591372]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_qbsmt")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=765055246]
 layout_mode = 0
