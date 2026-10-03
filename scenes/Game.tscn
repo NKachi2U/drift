@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dacvauiqincnp"]
 
-[ext_resource type="Texture2D" uid="uid://b0iqhu453142o" path="res://icon.svg" id="1_ibkli"]
 [ext_resource type="Script" uid="uid://2yn4y7kngsow" path="res://scripts/GameStart.gd" id="1_qbsmt"]
+[ext_resource type="Texture2D" uid="uid://ddunuqiakh5p7" path="res://assets/image.jpg" id="2_78awf"]
 [ext_resource type="PackedScene" uid="uid://bp3qu4lkl1x4i" path="res://scenes/main/node_2d.tscn" id="3_card_table"]
+[ext_resource type="Texture2D" uid="uid://bemm8l4d0p53w" path="res://assets/Untitled213_20261003132114.png" id="3_s0nni"]
 
 [node name="Game" type="Control" unique_id=668591372]
 layout_mode = 3
@@ -14,7 +15,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(28.665863, 16.29336)
-texture = ExtResource("1_ibkli")
+texture = ExtResource("2_78awf")
 expand_mode = 1
 
 [node name="Character" type="Control" parent="." unique_id=23722726]
@@ -25,11 +26,14 @@ offset_right = 81.0
 offset_bottom = 514.0
 scale = Vector2(3.680799, 3.5477355)
 
-[node name="TextureRect" type="TextureRect" parent="Character" unique_id=304489708]
+[node name="TextureRect2" type="TextureRect" parent="Character" unique_id=304489708]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_ibkli")
-expand_mode = 1
+offset_left = -15.75745
+offset_top = -64.83009
+offset_right = 24.24255
+offset_bottom = 4.4637604
+scale = Vector2(3.129973, 3.129973)
+texture = ExtResource("3_s0nni")
+expand_mode = 5
 
 [node name="CardTable" parent="." unique_id=913127958 instance=ExtResource("3_card_table")]
