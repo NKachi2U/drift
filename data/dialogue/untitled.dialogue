@@ -9,3 +9,37 @@ Nathan: Here are some choices. [#reveal]
 - End the conversation => END
 Nathan: For more information see the online documentation.
 => END
+
+~ beginning
+Hericlitus: No man steps in the same river twice, for it is not the same river and he is not the same man
+=> END
+
+~ narration
+This is the limbo, the space between life and death. 
+
+To move on to the afterlife, you must build your boat using your life’s memories. 
+
+Each stage of the journey, you will be offered 3 memories to choose from to build your boat, which may contribute to the style, sturdiness, and size of your boat.
+
+You start on a mini raft, here is a series of choices (tutorial); [#reveal]
+- First one
+	You picked the first one.
+- Second one
+	You picked the second one.
+- Start again => narration
+- End tutorial => game
+
+~ game
+Welcome to your journey! The afterlife demands that you build a boat as you make your way to your desired afterlife. The great beyond’s magic will grant you whatever you desire to reach it. Here is how it’ll work;
+
+Sample card () - Here, you are given a situation, then you make your choice
+Decorate your boat +10 style
+Add more material +10 sturdiness
+Make it bigger!! _+10 size
+
+There will, however, be sacrifices most of the time. Of course, everything comes with a price;
+Make it even bigger! +6 size  -5 sturdiness
+Strengthen the material +6 sturdiness -5 style
+Carve drawings into your raft +6 style -5 size
+
+=> END

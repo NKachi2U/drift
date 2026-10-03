@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://brr4mk63qd0qo"]
 
-[ext_resource type="Script" uid="uid://brkm26e655v3x" path="res://assets/DialogueBalloon.cs" id="1_36de5"]
+[ext_resource type="Script" uid="uid://cuuoj26jti6hj" path="res://assets/DialogueBalloon.cs" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://c3qmxhslp0dl7" path="res://addons/dialogue_manager/nodes/dialogue_label/DialogueLabel.tscn" id="2_a8ve6"]
 [ext_resource type="Script" uid="uid://bf0gf4upyxj5l" path="res://addons/dialogue_manager/nodes/responses_menu/DialogueResponsesMenu.cs" id="3_72ixx"]
 
