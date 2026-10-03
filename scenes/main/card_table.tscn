@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bp3qu4lkl1x4i"]
+
+[ext_resource type="Script" uid="uid://dh85ec1mv67pg" path="res://scenes/main/card_table.gd" id="1_nvdju"]
+[ext_resource type="Script" uid="uid://dh0itoqrp8r4u" path="res://scenes/main/card_manager.gd" id="2_iv08x"]
+[ext_resource type="PackedScene" uid="uid://dewyjbketf0pq" path="res://scenes/main/card.tscn" id="3_tmwn7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3fm7"]
+load_path = "res://.godot/imported/fullscreen.png-44c18e904223c96eb72e4553145ba542.ctex"
+
+[node name="main_screen" type="Node2D" unique_id=322347813]
+script = ExtResource("1_nvdju")
+
+[node name="card_manager" type="Node2D" parent="." unique_id=1838844213]
+script = ExtResource("2_iv08x")
+
+[node name="Card" parent="card_manager" unique_id=1626991120 instance=ExtResource("3_tmwn7")]
+position = Vector2(346, 426)
+
+[node name="toggle_fullscreen" type="TextureButton" parent="." unique_id=2030408851]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 176.0
+offset_bottom = 178.0
+scale = Vector2(0.5, 0.5)
+texture_normal = SubResource("CompressedTexture2D_a3fm7")
+
+[connection signal="pressed" from="toggle_fullscreen" to="." method="_on_toggle_fullscreen_pressed"]
