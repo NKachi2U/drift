@@ -1,23 +1,32 @@
 [gd_scene format=3 uid="uid://bp3qu4lkl1x4i"]
 
-[sub_resource type="CSharpScript" id="CSharpScript_eusfw"]
-script/source = "using Godot;
-using System;
-
-public partial class Node2d : Node2D
-{
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		GD.Print(\"How tiresome\");
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
-	}
-}
-"
+[ext_resource type="Script" uid="uid://dh85ec1mv67pg" path="res://scenes/main/node_2d.gd" id="1_lqrg5"]
+[ext_resource type="Script" uid="uid://dh0itoqrp8r4u" path="res://scenes/main/card_manager.gd" id="1_noowk"]
+[ext_resource type="Texture2D" uid="uid://b0iqhu453142o" path="res://icon.svg" id="1_wwqha"]
+[ext_resource type="PackedScene" uid="uid://dewyjbketf0pq" path="res://scenes/main/card.tscn" id="2_a3fm7"]
 
 [node name="Node2D" type="Node2D" unique_id=322347813]
-script = SubResource("CSharpScript_eusfw")
+script = ExtResource("1_lqrg5")
+
+[node name="card_manager" type="Node2D" parent="." unique_id=1838844213]
+script = ExtResource("1_noowk")
+
+[node name="Card" parent="card_manager" unique_id=1626991120 instance=ExtResource("2_a3fm7")]
+position = Vector2(561, 440)
+
+[node name="full_screen" type="TextureButton" parent="." unique_id=350479285]
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 129.0
+offset_bottom = 126.0
+texture_normal = ExtResource("1_wwqha")
+
+[node name="windowed" type="TextureButton" parent="." unique_id=370183259]
+offset_left = 128.0
+offset_top = -1.0
+offset_right = 256.0
+offset_bottom = 127.0
+texture_normal = ExtResource("1_wwqha")
+
+[connection signal="pressed" from="full_screen" to="." method="_on_full_screen_pressed"]
+[connection signal="pressed" from="windowed" to="." method="_on_windowed_pressed"]
