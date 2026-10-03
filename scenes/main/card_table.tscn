@@ -14,7 +14,7 @@ script = ExtResource("1_nvdju")
 script = ExtResource("2_iv08x")
 
 [node name="Card" parent="card_manager" unique_id=1626991120 instance=ExtResource("3_tmwn7")]
-position = Vector2(561, 440)
+position = Vector2(346, 426)
 
 [node name="toggle_fullscreen" type="TextureButton" parent="." unique_id=2030408851]
 offset_left = 1.0
