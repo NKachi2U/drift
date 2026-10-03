@@ -4,6 +4,7 @@ const COLLISION_MASK_CARD = 1
 
 var screen_size
 var card_being_dragged
+var is_hovered_over_card
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,11 +33,21 @@ func connect_card_signal(card):
 	card.connect("hovered_off", on_hovered_off_card)
 
 func on_hovered_over_card(card):
-	highlight_card(card, true)
+	if !is_hovered_over_card:
+		is_hovered_over_card = true;
+		highlight_card(card, true)
+	
 	
 
 func on_hovered_off_card(card):
+	# is_hovered_over_card = false
 	highlight_card(card, false)
+	var new_card_hovered = raycast_check_for_card()
+	if new_card_hovered:
+		highlight_card(new_card_hovered, false)
+	else:
+		is_hovered_over_card = false 
+	
 	
 
 func highlight_card(card, hovered):
