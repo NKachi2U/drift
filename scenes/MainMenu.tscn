@@ -26,6 +26,7 @@ text = "Game name
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1901950449]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Control" type="Control" parent="VBoxContainer" unique_id=1272441623]
 layout_mode = 2
