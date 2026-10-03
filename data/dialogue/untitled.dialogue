@@ -1,6 +1,6 @@
 ~ start
 Nathan: [[Hi|Hello|Howdy]], this is some dialogue.
-Nathan: Here are some choices.
+Nathan: Here are some choices. [#reveal]
 - First one
 	Nathan: You picked the first one.
 - Second one
