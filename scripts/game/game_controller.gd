@@ -41,10 +41,13 @@ func _play_situation(id: String) -> void:
 	if picked.get("dies", false):
 		GameState.die()
 	await get_tree().create_timer(AFTER_CHOICE_PAUSE).timeout
+	if picked.get("memory_event", false):
+		await _play_memory_event("")
 
 ## intro_cue is a label in memories.dialogue. The give-up choice itself is written there too.
 func _play_memory_event(intro_cue: String) -> void:
-	await _say(intro_cue)
+	if intro_cue != "":
+		await _say(intro_cue)
 	while true:
 		memory_picker.present(_memory_cards())
 		var id: String = await memory_picker.picked

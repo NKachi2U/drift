@@ -1,10 +1,19 @@
 [
 	"sit:tutorial_gain",
 	"sit:tutorial_tradeoff",
+	"sit:overboard",
 	"sit:relax",
 	"sit:supplies",
-	"mem:homesick",
 	"sit:fishing",
+	"sit:rest",
+	"sit:seasick",
+	"mem:homesick",
+	"sit:flowers",
+	"sit:edge",
+	"sit:constellation",
 	"mem:drifting",
+	"sit:inventory",
+	"sit:drooping",
+	"sit:direction",
 	"end"
 ]

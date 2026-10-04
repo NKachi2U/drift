@@ -3,99 +3,125 @@
 		"id": "tutorial_gain",
 		"text": "You start on a mini raft. Here, you are given a situation, then you make your choice.",
 		"choices": [
-			{
-				"label": "Decorate your boat",
-				"style": 10
-			},
-			{
-				"label": "Add more material",
-				"sturdiness": 10
-			},
-			{
-				"label": "Make it bigger!!",
-				"size": 10
-			}
+			{ "label": "Decorate your boat", "style": 10 },
+			{ "label": "Add more material", "sturdiness": 10 },
+			{ "label": "Make it bigger!!", "size": 10 }
 		]
 	},
 	{
 		"id": "tutorial_tradeoff",
 		"text": "There will, however, be sacrifices most of the time. Of course, everything comes with a price.",
 		"choices": [
-			{
-				"label": "Make it even bigger!",
-				"size": 6,
-				"sturdiness": -5
-			},
-			{
-				"label": "Strengthen the material",
-				"sturdiness": 6,
-				"style": -5
-			},
-			{
-				"label": "Carve drawings into your raft",
-				"style": 6,
-				"size": -5
-			}
+			{ "label": "Make it even bigger!", "size": 6, "sturdiness": -5 },
+			{ "label": "Strengthen the material", "sturdiness": 6, "style": -5 },
+			{ "label": "Carve drawings into your raft", "style": 6, "size": -5 }
+		]
+	},
+	{
+		"id": "overboard",
+		"text": "Some sacrifices are much bigger than others. As you inch closer to a peaceful oblivion, you may have to sacrifice your memories. Some of your supplies go overboard, what do you do?",
+		"choices": [
+			{ "label": "Use all your supplies, losing everything you need for the journey ahead.", "style": -20, "sturdiness": -20, "size": -20 },
+			{ "label": "Lay one of your memories to rest, refilling your supplies, even if you have to let it go forever.", "memory_event": true }
 		]
 	},
 	{
 		"id": "relax",
 		"text": "You want to relax, easing into your journey, what do you decide to do?",
 		"choices": [
-			{
-				"label": "Watch the stars, noting the beautiful colours",
-				"style": 7
-			},
-			{
-				"label": "Lean over the edge and run your hand through the water",
-				"sturdiness": 7
-			},
-			{
-				"label": "Take a nap, enjoying the breeze",
-				"size": 7
-			}
+			{ "label": "Watch the stars, noting the beautiful colours", "style": 7 },
+			{ "label": "Lean over the edge and run your hand through the water", "sturdiness": 7 },
+			{ "label": "Take a nap, enjoying the breeze", "size": 7 }
 		]
 	},
 	{
 		"id": "supplies",
 		"text": "You check your supplies, seeing what you can do to keep you busy.",
 		"choices": [
-			{
-				"label": "Illuminate your walls with your star lights",
-				"style": 6,
-				"sturdiness": -4
-			},
-			{
-				"label": "Make your boat more homey and comfortable",
-				"sturdiness": 7,
-				"size": -6
-			},
-			{
-				"label": "Build a makeshift lamp",
-				"size": 7,
-				"style": -3
-			}
+			{ "label": "Illuminate your walls with your star lights", "style": 6, "sturdiness": -4 },
+			{ "label": "Make your boat more homey and comfortable", "sturdiness": 7, "size": -6 },
+			{ "label": "Build a makeshift lamp", "size": 7, "style": -3 }
 		]
 	},
 	{
 		"id": "fishing",
 		"text": "You decide to go fishing for stars, what do you do?",
 		"choices": [
-			{
-				"label": "Build a makeshift fishing rod",
-				"sturdiness": 5,
-				"size": -3
-			},
-			{
-				"label": "Reach into the water, hoping to catch one in your hand",
-				"size": 2,
-				"style": -1
-			},
-			{
-				"label": "Look for the one that shines the brightest, then try to swipe it as you pass by it",
-				"style": 5,
-				"sturdiness": -4
-			}
+			{ "label": "Build a makeshift fishing rod", "sturdiness": 5, "size": -3 },
+			{ "label": "Reach into the water, hoping to catch one in your hand", "size": 2, "style": -1 },
+			{ "label": "Look for the one that shines the brightest, then try to swipe it as you pass by it", "style": 5, "sturdiness": -4 }
+		]
+	},
+	{
+		"id": "rest",
+		"text": "As you lie in bed, exhaustion hits you (yes, you still can still feel exhausted in death). The stars out on the river still shine bright, how do you solve this to achieve a peaceful rest?",
+		"choices": [
+			{ "label": "Fashion a nice blanket out of your materials", "style": 5, "size": -2 },
+			{ "label": "Build a small shelter, angled so that minimal light reaches your eyes", "size": 6, "style": -2 },
+			{ "label": "Do nothing, the light is calming and warm", "sturdiness": 4, "size": -3 }
+		]
+	},
+	{
+		"id": "seasick",
+		"text": "You wake up and you feel like you’re going to throw up; seasickness. You didn’t think it was still possible to become sick in the afterlife, but you know you don’t want to spend it sick.",
+		"choices": [
+			{ "label": "Try to sleep it off", "sturdiness": 2, "style": -1 },
+			{ "label": "Eat a flower - you don’t know what it does but it may have healing properties", "size": 3, "sturdiness": -1 },
+			{ "label": "Jump off the boat, you don’t want to make it to your final destination", "dies": true }
+		]
+	},
+	{
+		"id": "flowers",
+		"text": "The flowers on your boat seem to be growing at an exponential rate. They would get heavier and heavier, and your boat doesn’t seem like it going to hold on soon",
+		"choices": [
+			{ "label": "Cut off the entire flower vine, hopefully they grow back", "sturdiness": 5, "size": -3 },
+			{ "label": "Pick them up, trying to keep them within the boat", "size": 4, "sturdiness": -2 },
+			{ "label": "Chop off some of the vine, keeping some of the strong vines and pretty flowers", "style": 5, "sturdiness": -3 }
+		]
+	},
+	{
+		"id": "edge",
+		"text": "You’re sitting on the edge of your boat, your legs dangling from the boat. The sea seems to be much calmer now, what do you do?",
+		"choices": [
+			{ "label": "Try to catch up on sleep after your sea sickness", "sturdiness": 9 },
+			{ "label": "Observe the river water, admiring its water’s stars", "style": 10 },
+			{ "label": "Hum yourself a song. You don’t know where it comes from or where you heard it, just that it makes you feel warm.", "size": 10 }
+		]
+	},
+	{
+		"id": "constellation",
+		"text": "You look up at the sky, watching the stars. You realize that, with how many there are in the sky, you can make a shape with them in your mind. Which one should you envision?",
+		"choices": [
+			{ "label": "A mountain", "sturdiness": 8, "style": -4 },
+			{ "label": "An old tree", "size": 7, "style": -3 },
+			{ "label": "Close your eyes, ignoring the skies, try to remember what the skies looked like back home as you drift away", "style": 8, "sturdiness": -3 }
+		]
+	},
+	{
+		"id": "inventory",
+		"text": "You wake up with a jolt, head and heart losing feeling lighter than usual. You stand up, wanting to ground you. You reach into your boat’s inventory. What do you feel?",
+		"choices": [
+			{ "label": "A pillow. It feels strangely comforting, more than it should. But you don’t try to remember why. You never will", "sturdiness": 5, "style": -3 },
+			{ "label": "Some beads and some string. You reckon you should make yourself a bracelet, even if you don’t have it for long.", "style": 6, "size": -3 },
+			{ "label": "A book. It’s written in a language you can’t understand. But you do know it’s yours, at least it used to.", "size": 5, "sturdiness": -3 }
+		]
+	},
+	{
+		"id": "drooping",
+		"text": "The flowers on the boat are drooping, as if they are thirsty, what do you think you should do?",
+		"choices": [
+			{ "label": "Don’t do anything" },
+			{ "label": "Try to splash some of the water onto them" },
+			{ "label": "Sing them something. It’s the afterlife right? That should work" }
+		]
+	},
+	{
+		"id": "direction",
+		"text": "This entire time, you’re just not realizing you don’t know the direction of which you are going. You know what you are going towards the beyond but the boat must be directing itself. What do you conclude?",
+		"choices": [
+			{ "label": "The boat must be magic" },
+			{ "label": "The boat must be alive" },
+			{ "label": "The river must be coincidentally taking me in the right direction" }
 		]
 	}
 ]

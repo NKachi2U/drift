@@ -5,6 +5,7 @@ extends Node
 signal stats_changed(stats: Dictionary)
 signal memory_lost(memory_id: String)
 signal memory_gained(memory_id: String)
+signal player_died
 
 const STATS: Array[String] = ["style", "sturdiness", "size"]
 ## Scale of the HUD bars. Stats themselves have no cap.
@@ -74,15 +75,16 @@ func give_up(memory_id: String) -> void:
 
 ## The Death card: every memory goes into the river.
 func give_up_all() -> void:
-	died = true
 	for id in held_memories.duplicate():
 		held_memories.erase(id)
 		memory_lost.emit(id)
+	die()
 	stats_changed.emit(stats())
 
 ## For "jump off the boat" style choices that end in the Death ending without losing memories.
 func die() -> void:
 	died = true
+	player_died.emit()
 
 func fool_unlocked() -> bool:
 	return held_memories.is_empty()

@@ -3,6 +3,8 @@ extends CanvasLayer
 ## Anything that replaces it needs present(prompt, options) and the chosen(index) signal.
 
 signal chosen(index: int)
+signal opened
+signal closed
 
 const FADE_TIME = 0.25
 
@@ -26,6 +28,7 @@ func present(prompt: String, options: Array[String]) -> void:
 		_options.add_child(button)
 	_root.modulate.a = 0.0
 	_root.show()
+	opened.emit()
 	create_tween().tween_property(_root, "modulate:a", 1.0, FADE_TIME)
 
 func _on_option_pressed(index: int) -> void:
@@ -35,4 +38,5 @@ func _on_option_pressed(index: int) -> void:
 	tween.tween_property(_root, "modulate:a", 0.0, FADE_TIME)
 	await tween.finished
 	_root.hide()
+	closed.emit()
 	chosen.emit(index)
