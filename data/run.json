@@ -3,7 +3,8 @@
 	"sit:tutorial_tradeoff",
 	"sit:relax",
 	"sit:supplies",
+	"mem:homesick",
 	"sit:fishing",
-	"mem",
+	"mem:drifting",
 	"end"
 ]

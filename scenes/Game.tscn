@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
 [ext_resource type="PackedScene" path="res://scenes/ui/choice_panel.tscn" id="9_choices"]
 [ext_resource type="Script" path="res://scripts/game/game_controller.gd" id="10_controller"]
+[ext_resource type="PackedScene" path="res://scenes/ui/memory_picker.tscn" id="11_picker"]
 
 [node name="Game" type="Control" unique_id=668591372]
 layout_mode = 3
@@ -46,6 +47,9 @@ expand_mode = 5
 
 [node name="ChoicePanel" parent="." instance=ExtResource("9_choices")]
 
-[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("choices")]
+[node name="MemoryPicker" parent="." instance=ExtResource("11_picker")]
+
+[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("choices", "memory_picker")]
 script = ExtResource("10_controller")
 choices = NodePath("../ChoicePanel")
+memory_picker = NodePath("../MemoryPicker")

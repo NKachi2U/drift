@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cb7qumc8foqax"
+path="res://.godot/imported/memories.dialogue-88b028456a20d061c640aba9803062c7.tres"
+
+[deps]
+
+source_file="res://data/dialogue/memories.dialogue"
+dest_files=["res://.godot/imported/memories.dialogue-88b028456a20d061c640aba9803062c7.tres"]
+
+[params]
+
+defaults=true

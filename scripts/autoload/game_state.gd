@@ -48,6 +48,16 @@ func apply(deltas: Dictionary) -> void:
 		base[stat_name] += int(deltas.get(stat_name, 0))
 	stats_changed.emit(stats())
 
+## What giving up a memory costs, e.g. "lose 20 Style, 10 Sturdiness". Used by the dialogue files.
+func cost_text(memory_id: String) -> String:
+	var package: Dictionary = Content.memory(memory_id).get("package", {})
+	var parts: PackedStringArray = []
+	for stat_name in STATS:
+		var amount := int(package.get(stat_name, 0))
+		if amount != 0:
+			parts.append("%d %s" % [amount, stat_name.capitalize()])
+	return "lose " + ", ".join(parts)
+
 func holds(memory_id: String) -> bool:
 	return held_memories.has(memory_id)
 
