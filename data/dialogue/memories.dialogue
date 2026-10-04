@@ -33,7 +33,7 @@ The great beyond is merciful enough to let you be reminded of past life
 ~ lose5
 There must be people wherever your home is. They must miss you, or at least, you hope they do. How cruel it must be, to miss someone so strongly, someone who may not even remember you.
 You try and try to remember them, but their faces or who they are never come to mind. You hope that one day, when it is their turn to make this drift, that they also forget, that the pain becomes replaced with peace and calm.
-The great beyond is merciful enough to let you be reminded of past life
+The great beyond is merciful enough to let you keep one memory.
 => END
 
 ~ memory_gone
@@ -112,7 +112,7 @@ Would you like to give up this memory?
 => END
 
 ~ death
-PLACEHOLDER\: You could throw all your memories in the river Lethe.
+You could throw all your memories in the river Lethe.
 - Throw everything in the river
 	do GameState.give_up_all()
 - Step back
@@ -141,5 +141,10 @@ You enjoy the outdoors as vines and other greenery seem to slowly consume all of
 => END
 
 ~ ending_death
-PLACEHOLDER\: You throw all your memories in the river Lethe.
+You throw all your memories in the river Lethe.
+You are consumed by the river, you lose yourself until you are indistinguishable from the pale waters.
+=> END
+
+~ ending_lost
+You are consumed by the river, you lose yourself until you are indistinguishable from the pale waters.
 => END

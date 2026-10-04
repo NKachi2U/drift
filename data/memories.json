@@ -58,9 +58,9 @@
 		"cue": "memory_hanged_man",
 		"starts_held": true,
 		"package": {
-			"style": 10,
-			"sturdiness": 15,
-			"size": 15
+			"style": 0,
+			"sturdiness": 30,
+			"size": 10
 		},
 		"color": "#b48be0"
 	},

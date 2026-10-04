@@ -6,7 +6,7 @@ static var _beginning_played := false
 const BEGINNING_DIALOGUE = preload("res://data/dialogue/untitled.dialogue")
 @onready var _buttons: Array[TextureButton] = [
 	$VBoxContainer/Control/Start,
-	$VBoxContainer/Control2/Settings,
+	#$VBoxContainer/Control2/Settings,
 	$VBoxContainer/Control3/Quit,
 ]
 
@@ -60,8 +60,8 @@ func _on_start_pressed() -> void:
 	await tween.finished
 	get_tree().change_scene_to_file("res://scenes/Game.tscn")
 
-func _on_settings_pressed():
-	print("Settings clicked")
+#func _on_settings_pressed():
+	#print("Settings clicked")
 
 func _on_quit_pressed():
 	get_tree().quit()

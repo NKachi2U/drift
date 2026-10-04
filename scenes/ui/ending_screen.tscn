@@ -1,0 +1,53 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/ending_screen.gd" id="1_script"]
+
+[node name="EndingScreen" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_script")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Black" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Image" type="TextureRect" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Return" type="Button" parent="Root"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -70.0
+offset_right = -30.0
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 18
+text = "Return to the menu"

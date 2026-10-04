@@ -1,5 +1,7 @@
 extends Node2D
 
+signal card_selected(card)
+
 const COLLISION_MASK_CARD = 1
 
 @export var fan_spacing := 60.0
@@ -18,6 +20,7 @@ var cards: Array = []                 # filled by connect_card_signal
 var base_positions := {}              # card -> layout position (without hover lift)
 var layout_tween: Tween
 var layout_queued := false
+var interactive := true                # the game turns clicks off outside memory events
 
 
 @export var right_margin := 100.0     # distance from the right edge to the deck's origin
@@ -48,6 +51,8 @@ func _process(delta: float) -> void:
 			#finish_drag()
 
 func _input(event):
+	if not interactive:
+		return
 	if event is InputEventMouseButton \
 			and event.button_index == MOUSE_BUTTON_LEFT \
 			and event.is_pressed():
@@ -61,7 +66,15 @@ func _input(event):
 			on_card_selected(card)    # clicked a card in the fan
 
 func on_card_selected(card):
-	print("selected: ", card.name)    # play/select the card here
+	card_selected.emit(card)
+
+func remove_card(card) -> void:
+	cards.erase(card)
+	base_positions.erase(card)
+	var tween := create_tween()
+	tween.tween_property(card, "modulate:a", 0.0, fan_duration)
+	tween.tween_callback(card.queue_free)
+	_apply_layout(true)
 
 func toggle() -> void:
 	is_open = not is_open
@@ -89,8 +102,9 @@ func _apply_layout(animate: bool) -> void:
 
 	if layout_tween and layout_tween.is_running():
 		layout_tween.kill()
-	layout_tween = create_tween().set_parallel(true)
-	layout_tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	if animate:
+		layout_tween = create_tween().set_parallel(true)
+		layout_tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
 	for i in n:
 		var card = cards[i]

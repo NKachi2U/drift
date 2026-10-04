@@ -154,16 +154,16 @@
 	},
 	{
 		"id": "closer",
-		"text": "You stare in front of you. The destination seems to be a bit closer. What do you do?",
+		"text": "You stare in front of you. You seem to be almost at the end of this path. What do you do?",
 		"choices": [
-			{"label": "Smile and shake your head", "style": 2, "sturdiness": -2, "size": 1},
+			{"label": "Smile and shake your head", "style": 2, "sturdiness": -2},
 			{"label": "Blink and look again", "style": 1, "sturdiness": -1, "size": -1},
-			{"label": "Sleep", "style": 1, "sturdiness": 1, "size": -1}
+			{"label": "Close your eyes", "style": 1, "sturdiness": 1, "size": -2}
 		]
 	},
 	{
 		"id": "faces",
-		"text": "It’s a bit hard remembering your parents' faces. What do you do?",
+		"text": "It’s a bit hard remembering your parents' faces. How do you cope?",
 		"choices": [
 			{"label": "Try harder", "style": -2, "sturdiness": -2, "size": -2},
 			{"label": "Accept your fate", "style": -2, "sturdiness": 1, "size": -5},
@@ -177,6 +177,24 @@
 			{"label": "Nothing"},
 			{"label": "Something", "sturdiness": -2, "size": 2},
 			{"label": "Everything", "style": 1, "sturdiness": 1, "size": -2}
+		]
+	},
+	{
+		"id": "emotion",
+		"text": "Some time passes as you feel your memories move past you. What is the last emotion you hope to experience?",
+		"choices": [
+			{"label": "Nostalgia", "style": -2, "sturdiness": 5, "size": -2},
+			{"label": "Fulfillment", "style": 3, "sturdiness": 2, "size": -4},
+			{"label": "Happiness", "style": 4, "sturdiness": -2, "size": -2}
+		]
+	},
+	{
+		"id": "journey_end",
+		"text": "You are reaching the end of this journey. What do you do?",
+		"choices": [
+			{"label": "Pray"},
+			{"label": "Hope"},
+			{"label": "Believe"}
 		]
 	}
 ]

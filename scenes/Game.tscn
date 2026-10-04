@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
 [ext_resource type="PackedScene" path="res://scenes/ui/choice_panel.tscn" id="9_choices"]
 [ext_resource type="Script" uid="uid://doghyldtmixsj" path="res://scripts/game/game_controller.gd" id="10_controller"]
-[ext_resource type="PackedScene" path="res://scenes/ui/memory_picker.tscn" id="11_picker"]
+[ext_resource type="PackedScene" path="res://scenes/ui/deck_picker.tscn" id="11_picker"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ending_screen.tscn" id="16_ending"]
 [ext_resource type="Texture2D" uid="uid://joo23d536fk6" path="res://assets/Untitled225_20261003142038.png" id="12_raft_person"]
 [ext_resource type="Texture2D" uid="uid://bgggtnnhrgglr" path="res://assets/Untitled225_20261003142024.png" id="13_raft_empty"]
 [ext_resource type="Script" uid="uid://esp6yjmc23fc" path="res://scripts/game/raft.gd" id="14_raft"]
@@ -76,9 +77,13 @@ portrait = NodePath("../Character")
 
 [node name="ChoicePanel" parent="." unique_id=450824961 instance=ExtResource("9_choices")]
 
-[node name="MemoryPicker" parent="." unique_id=677988655 instance=ExtResource("11_picker")]
+[node name="DeckPicker" parent="." node_paths=PackedStringArray("deck") instance=ExtResource("11_picker")]
+deck = NodePath("../main_screen/card_manager")
 
-[node name="Controller" type="Node" parent="." unique_id=1273425624 node_paths=PackedStringArray("choices", "memory_picker")]
+[node name="EndingScreen" parent="." instance=ExtResource("16_ending")]
+
+[node name="Controller" type="Node" parent="." unique_id=1273425624 node_paths=PackedStringArray("choices", "memory_picker", "ending_screen")]
 script = ExtResource("10_controller")
 choices = NodePath("../ChoicePanel")
-memory_picker = NodePath("../MemoryPicker")
+memory_picker = NodePath("../DeckPicker")
+ending_screen = NodePath("../EndingScreen")

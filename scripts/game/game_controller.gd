@@ -4,7 +4,7 @@ extends Node
 
 const MENU_SCENE = "res://scenes/MainMenu.tscn"
 const MEMORIES_DIALOGUE = preload("res://data/dialogue/memories.dialogue")
-const CARD_ART = "res://assets/Cards/%s.jpg"
+const ENDING_ART = "res://assets/%s.jpg"
 const AFTER_CHOICE_PAUSE = 0.7
 const MEMORIES_OFFERED = 3
 # The one card in a memory event that is not a memory.
@@ -12,6 +12,7 @@ const DEATH = "death"
 
 @export var choices: Node
 @export var memory_picker: Node
+@export var ending_screen: Node
 
 func run() -> void:
 	for beat: String in Content.run():
@@ -51,38 +52,35 @@ func _play_situation(id: String) -> void:
 func _play_memory_event(intro_cue: String) -> void:
 	if GameState.beads_left() <= 1:
 		return
+	Music.play("memories")
 	await _say(intro_cue)
-	var offered: Array = GameState.held_memories.duplicate()
+	var offered: Array[String] = GameState.held_memories.duplicate()
 	offered.shuffle()
 	offered.resize(mini(MEMORIES_OFFERED, offered.size()))
-	var cards: Array[Dictionary] = []
-	for id: String in offered:
-		cards.append(_card(id, Content.memory(id).get("card", "")))
-	cards.append(_card(DEATH, "Death"))
+	offered.append(DEATH)
 	while true:
-		memory_picker.present(cards)
+		memory_picker.present(offered)
 		var id: String = await memory_picker.picked
 		if id == DEATH:
 			await _say(DEATH)
 			if GameState.died:
+				Music.play("main")
 				return
 			continue
 		await _say(Content.memory(id).get("cue", ""))
 		if not GameState.holds(id):
 			break
 	await _say("memory_gone")
+	Music.play("main")
 	await get_tree().create_timer(AFTER_CHOICE_PAUSE).timeout
 
 func _play_ending() -> void:
 	var id := GameState.pick_ending()
+	await ending_screen.show_ending(load(ENDING_ART % Content.ending(id).get("image", "")))
 	await _say("ending_" + id)
-	var back: Array[String] = ["Return to the menu"]
-	choices.present(Content.ending(id).get("title", ""), back)
-	await choices.chosen
+	ending_screen.offer_return()
+	await ending_screen.closed
 	get_tree().change_scene_to_file(MENU_SCENE)
-
-func _card(id: String, art: String) -> Dictionary:
-	return {"id": id, "texture": load(CARD_ART % art)}
 
 func _say(cue: String) -> void:
 	DialogueManager.show_dialogue_balloon(MEMORIES_DIALOGUE, cue)

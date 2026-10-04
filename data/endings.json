@@ -1,18 +1,27 @@
 [
 	{
 		"id": "style",
-		"title": "A bed of clouds"
+		"title": "Comfort",
+		"image": "IMG_0449"
 	},
 	{
 		"id": "sturdiness",
-		"title": "A forest full of trees"
+		"title": "Rich",
+		"image": "IMG_0450"
 	},
 	{
 		"id": "size",
-		"title": "Living again"
+		"title": "Alive",
+		"image": "IMG_0452"
 	},
 	{
 		"id": "death",
-		"title": "The river Lethe"
+		"title": "Death",
+		"image": "IMG_0445"
+	},
+	{
+		"id": "lost",
+		"title": "Lost",
+		"image": "IMG_0446"
 	}
 ]

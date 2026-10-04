@@ -7,8 +7,6 @@ signal memory_lost(memory_id: String)
 signal player_died
 
 const STATS: Array[String] = ["style", "sturdiness", "size"]
-## Scale of the HUD bars. Stats themselves have no cap.
-const BAR_MAX = 150
 
 var base: Dictionary = {}
 var held_memories: Array[String] = []
@@ -79,7 +77,7 @@ func give_up_all() -> void:
 	die()
 	stats_changed.emit(stats())
 
-## For "jump off the boat" style choices that end in the Death ending without losing memories.
+## Dying while still holding memories (jumping off the boat) leads to the "lost" ending.
 func die() -> void:
 	died = true
 	player_died.emit()
@@ -87,7 +85,7 @@ func die() -> void:
 ## Returns an id from endings.json. Ties go to the earlier stat in STATS.
 func pick_ending() -> String:
 	if died:
-		return "death"
+		return "death" if held_memories.is_empty() else "lost"
 	var best := STATS[0]
 	for stat_name in STATS:
 		if stat(stat_name) > stat(best):

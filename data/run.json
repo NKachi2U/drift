@@ -20,10 +20,12 @@
 	"sit:company",
 	"sit:keepsake",
 	"sit:distance",
+	"sit:emotion",
 	"mem:lose4",
 	"sit:closer",
 	"sit:faces",
 	"sit:ponder",
+	"sit:journey_end",
 	"mem:lose5",
 	"end"
 ]
