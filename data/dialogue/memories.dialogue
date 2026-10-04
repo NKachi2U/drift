@@ -1,0 +1,88 @@
+~ homesick
+You feel homesick.
+You don’t know how that’s possible, but you do.
+Oh, dear player, how is it possible to yearn for a home you don’t have?
+One that you do not remember. One that you never will again.
+The great beyond is merciful enough to let you be reminded of past life.
+=> END
+
+~ drifting
+What are you exactly, where have you gone?
+I don’t mean where you are right now. Is this what you want? What are you without your life?
+Clearly, not just a dead body.
+Who are you, dear player, as you drift away? Will there be anything left of you once all of you, and this time, you know we mean, all of you this time, as gone?
+The great beyond is merciful enough to let you be reminded of past life.
+=> END
+
+~ memory_gone
+You wipe a tear from your eye, as if you can feel the memory being literally pulled out of you.
+And then it’s gone, consumed by oblivion.
+=> END
+
+~ memory_justice
+When you were young, you always played in the neighborhood playground. It had a small wooden ladder that led to a green slide, looping around twice, and the ground was made of woodchips.
+Your father would always take you down that green slide, and you would make the same gleeful noise every time you two slid to the bottom.
+The older kids always sat on the swings, and they were considered the “cool” ones, so the other kids your age would always fight over the opportunity to use the swings when they weren’t there.
+You want to be like the “cool” kids don’t you? Well, you never had much interest in the swings. You like playing on the slides more.
+Even when you grew older, you would always slide down the green slide once when you walked by the park. It reminded you of your father.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("justice")}})
+	do GameState.give_up("justice")
+- Keep it
+=> END
+
+~ memory_hermit
+One time when you were young you tried climbing the slide at the local playground from the bottom up, but because of the loop, you didn’t see someone else sliding down at that time.
+When you two collided you slid down backwards and landed on the woodchips, falling on your side. One of the parents nearby came over to make sure you were alright.
+You didn’t break anything, but you got a painful splinter that your parents scolded you for when you got home.
+When you were in middle school, the community board decided to remove the playground to make space to build a townhome.
+In the interval of two years, the playground and surrounding area turned into a 70 residence townhome.
+Although you were disheartened that the place of your childhood memories were gone, you knew the buildings were built to provide homes for low to middle income families following the housing crisis.
+Sometimes pragmatism wins over sentimentalism. Sometimes you must leave your memories.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("hermit")}})
+	do GameState.give_up("hermit")
+- Keep it
+=> END
+
+~ memory_strength
+Your father was a grand man. He was strong, large, imposing, but more than anything, he was so incredibly kind. Sometimes to his own detriment.
+He worked as a salesperson, selling small trinkets and wooden crafts. Why he got into this field is a complete mystery.
+He never made much money and given his personality, he lacked the eagerness and pushiness required for a salesperson, sometimes even giving the trinkets away for free.
+Your mother would often complain about his work and how he never made much money, yet he loved his job, and despite your mother’s complaints, she acknowledged his work and his passion.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("strength")}})
+	do GameState.give_up("strength")
+- Keep it
+=> END
+
+~ memory_wheel
+One time your father brought you a keychain from work. It was a small frog keychain, but during its production there was a manufacturing error, resulting in the left eye being smaller than the right.
+The company gave that batch away for free, and your father happened to end up with one. Despite the misprint, the little mismatch had a certain charm to it, its unevenness capturing your attention.
+For the next while you kept it on your backpack, hanging slightly left of centre, mimicking its deformity.
+One day, when pulling your books out from your backpack, you noticed the keychain was missing. You looked all around, around the floor, inside the backpack, inside the books.
+You trace your steps, but it was nowhere to be found. As you thought back to when it could have fallen off, a daunting feeling approached the corner of your mind.
+It might not have fallen off today. It could have gone missing many days ago, and you only realized until now.
+It probably fell off sometime when you were walking to or from school, without you the wiser, now lying someplace on the edge of the road.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("wheel")}})
+	do GameState.give_up("wheel")
+- Keep it
+=> END
+
+~ memory_fool
+Waking up on a bright morning, being awoken by your mother, her soft voice ushering you out the door as she beckons you for breakfast.
+Your father typing away in his room as you sit down and nibble away.
+As far as you know, life is perfect, the two most important people in your life within your vision.
+=> END
+
+~ hanged_man
+PLACEHOLDER: You do nothing. The river carries you on.
+=> END
+
+~ death
+PLACEHOLDER: You could throw all your memories in the river Lethe.
+- Throw everything in the river
+	do GameState.give_up_all()
+- Step back
+=> END

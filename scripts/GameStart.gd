@@ -2,6 +2,7 @@ extends Control
 
 var _fade: TextureRect
 func _ready() -> void:
+	GameState.reset()
 	var layer := CanvasLayer.new()
 	layer.layer = 10
 	add_child(layer)
@@ -16,6 +17,8 @@ func _ready() -> void:
 	await tween.finished
 	_fade.hide()
 	DialogueManager.show_dialogue_balloon(load("res://data/dialogue/untitled.dialogue"), "narration")
+	await DialogueManager.dialogue_ended
+	$Controller.run()
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_ESCAPE:

@@ -1,0 +1,26 @@
+[
+	{
+		"id": "style",
+		"rule": "highest_style",
+		"title": "Style",
+		"text": "The afterlife feels much more comfortable. You are lying on a bed of clouds."
+	},
+	{
+		"id": "sturdiness",
+		"rule": "highest_sturdiness",
+		"title": "Sturdiness",
+		"text": "The afterlife feels rich."
+	},
+	{
+		"id": "size",
+		"rule": "highest_size",
+		"title": "Size",
+		"text": "The afterlife feels like living again."
+	},
+	{
+		"id": "death",
+		"rule": "death",
+		"title": "Death",
+		"text": "You throw all your memories in the river Lethe."
+	}
+]

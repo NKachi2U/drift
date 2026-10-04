@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://brr4mk63qd0qo"]
 
-[ext_resource type="Script" uid="uid://cuuoj26jti6hj" path="res://assets/DialogueBalloon.cs" id="1_36de5"]
-[ext_resource type="PackedScene" uid="uid://c3qmxhslp0dl7" path="res://addons/dialogue_manager/nodes/dialogue_label/DialogueLabel.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bf0gf4upyxj5l" path="res://addons/dialogue_manager/nodes/responses_menu/DialogueResponsesMenu.cs" id="3_72ixx"]
+[ext_resource type="Script" uid="uid://r3nwoii1cgsf" path="res://assets/DialogueBalloon.gd" id="1_36de5"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/nodes/responses_menu/dialogue_responses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 content_margin_left = 20.0
@@ -187,14 +187,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/CenterContainer" unique_id=1321351341 node_paths=PackedStringArray("ResponseTemplate")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon/CenterContainer" unique_id=1321351341 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_72ixx")
-ResponseTemplate = NodePath("ResponseExample")
+response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/CenterContainer/ResponsesMenu" unique_id=1595872767]
 layout_mode = 2
@@ -202,3 +202,6 @@ text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=140912110]
 unique_name_in_owner = true
+
+[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/CenterContainer/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

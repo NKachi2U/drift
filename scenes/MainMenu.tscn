@@ -40,6 +40,7 @@ offset_bottom = -494.0
 texture_normal = ExtResource("2_ow34m")
 
 [node name="Control2" type="Control" parent="VBoxContainer" unique_id=1646033080]
+visible = false
 layout_mode = 2
 
 [node name="Settings" type="TextureButton" parent="VBoxContainer/Control2" unique_id=1800214871]
