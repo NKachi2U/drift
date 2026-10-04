@@ -6,12 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://bemm8l4d0p53w" path="res://assets/Untitled213_20261003132114.png" id="3_s0nni"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
 [ext_resource type="PackedScene" path="res://scenes/ui/choice_panel.tscn" id="9_choices"]
-[ext_resource type="Script" path="res://scripts/game/game_controller.gd" id="10_controller"]
+[ext_resource type="Script" uid="uid://doghyldtmixsj" path="res://scripts/game/game_controller.gd" id="10_controller"]
 [ext_resource type="PackedScene" path="res://scenes/ui/memory_picker.tscn" id="11_picker"]
 [ext_resource type="Texture2D" uid="uid://joo23d536fk6" path="res://assets/Untitled225_20261003142038.png" id="12_raft_person"]
 [ext_resource type="Texture2D" uid="uid://bgggtnnhrgglr" path="res://assets/Untitled225_20261003142024.png" id="13_raft_empty"]
-[ext_resource type="Script" path="res://scripts/game/raft.gd" id="14_raft"]
-[ext_resource type="Script" path="res://scripts/game/portrait.gd" id="15_portrait"]
+[ext_resource type="Script" uid="uid://esp6yjmc23fc" path="res://scripts/game/raft.gd" id="14_raft"]
+[ext_resource type="Script" uid="uid://8d102sdam0dc" path="res://scripts/game/portrait.gd" id="15_portrait"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_raft_person"]
 atlas = ExtResource("12_raft_person")
@@ -35,7 +35,7 @@ scale = Vector2(28.665863, 16.29336)
 texture = ExtResource("2_78awf")
 expand_mode = 1
 
-[node name="Character" type="Control" parent="." node_paths=PackedStringArray("choices") unique_id=23722726]
+[node name="Character" type="Control" parent="." unique_id=23722726]
 anchors_preset = 0
 offset_left = 41.0
 offset_top = 474.0
@@ -44,7 +44,6 @@ offset_bottom = 514.0
 scale = Vector2(3.680799, 3.5477355)
 mouse_filter = 2
 script = ExtResource("15_portrait")
-choices = NodePath("../ChoicePanel")
 
 [node name="TextureRect2" type="TextureRect" parent="Character" unique_id=304489708]
 layout_mode = 0
@@ -56,12 +55,12 @@ scale = Vector2(3.129973, 3.129973)
 texture = ExtResource("3_s0nni")
 expand_mode = 5
 
-[node name="Raft" type="TextureRect" parent="."]
+[node name="Raft" type="TextureRect" parent="." unique_id=519748505 node_paths=PackedStringArray("portrait")]
 layout_mode = 0
-offset_left = 411.0
-offset_top = 140.0
-offset_right = 741.0
-offset_bottom = 460.0
+offset_left = 446.0
+offset_top = 90.0
+offset_right = 706.0
+offset_bottom = 340.0
 mouse_filter = 2
 texture = SubResource("AtlasTexture_raft_person")
 expand_mode = 1
@@ -69,16 +68,17 @@ stretch_mode = 5
 script = ExtResource("14_raft")
 with_person = SubResource("AtlasTexture_raft_person")
 empty = SubResource("AtlasTexture_raft_empty")
+portrait = NodePath("../Character")
 
 [node name="main_screen" parent="." unique_id=322347813 instance=ExtResource("2_cpr0p")]
 
-[node name="HUD" parent="." instance=ExtResource("8_hud")]
+[node name="HUD" parent="." unique_id=966847478 instance=ExtResource("8_hud")]
 
-[node name="ChoicePanel" parent="." instance=ExtResource("9_choices")]
+[node name="ChoicePanel" parent="." unique_id=450824961 instance=ExtResource("9_choices")]
 
-[node name="MemoryPicker" parent="." instance=ExtResource("11_picker")]
+[node name="MemoryPicker" parent="." unique_id=677988655 instance=ExtResource("11_picker")]
 
-[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("choices", "memory_picker")]
+[node name="Controller" type="Node" parent="." unique_id=1273425624 node_paths=PackedStringArray("choices", "memory_picker")]
 script = ExtResource("10_controller")
 choices = NodePath("../ChoicePanel")
 memory_picker = NodePath("../MemoryPicker")

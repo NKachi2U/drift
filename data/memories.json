@@ -2,26 +2,26 @@
 	{
 		"id": "justice",
 		"card": "Justice",
-		"title": "The Green Slide",
+		"title": "The Splinter",
 		"cue": "memory_justice",
 		"starts_held": true,
 		"package": {
-			"style": 20,
-			"sturdiness": 10,
-			"size": 10
+			"style": 0,
+			"sturdiness": 20,
+			"size": 20
 		},
 		"color": "#e8c35a"
 	},
 	{
 		"id": "hermit",
 		"card": "TheHermit",
-		"title": "The Splinter",
+		"title": "The Green Slide",
 		"cue": "memory_hermit",
 		"starts_held": true,
 		"package": {
-			"style": 0,
-			"sturdiness": 30,
-			"size": 10
+			"style": 20,
+			"sturdiness": 0,
+			"size": 20
 		},
 		"color": "#7fa8e8"
 	},
@@ -52,11 +52,24 @@
 		"color": "#7fc98a"
 	},
 	{
+		"id": "hanged_man",
+		"card": "TheHangedMan",
+		"title": "The Hospital",
+		"cue": "memory_hanged_man",
+		"starts_held": true,
+		"package": {
+			"style": 10,
+			"sturdiness": 15,
+			"size": 15
+		},
+		"color": "#b48be0"
+	},
+	{
 		"id": "fool",
 		"card": "TheFool",
 		"title": "A Bright Morning",
 		"cue": "memory_fool",
-		"starts_held": false,
+		"starts_held": true,
 		"package": {
 			"style": 40,
 			"sturdiness": 0,

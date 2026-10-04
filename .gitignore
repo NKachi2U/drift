@@ -1,3 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Recreated by the .NET editor build; the project has no C#
+*.csproj
+*.sln

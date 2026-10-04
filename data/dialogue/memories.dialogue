@@ -1,17 +1,39 @@
-~ homesick
+~ reflect
+As you go along your journey, dear player, reflect on what it means to give all that you know up.
+=> END
+
+~ lose1
 You feel homesick.
 You don’t know how that’s possible, but you do.
 Oh, dear player, how is it possible to yearn for a home you don’t have?
 One that you do not remember. One that you never will again.
-The great beyond is merciful enough to let you be reminded of past life.
+The great beyond is merciful enough to let you be reminded of past life
 => END
 
-~ drifting
+~ lose2
 What are you exactly, where have you gone?
 I don’t mean where you are right now. Is this what you want? What are you without your life?
 Clearly, not just a dead body.
 Who are you, dear player, as you drift away? Will there be anything left of you once all of you, and this time, you know we mean, all of you this time, as gone?
-The great beyond is merciful enough to let you be reminded of past life.
+The great beyond is merciful enough to let you be reminded of past life
+=> END
+
+~ lose3
+It suddenly hits you that once you reach your destination, you don’t know what will happen to you.
+Is there even a ‘you’ if you don’t remember anything else? If you don’t recall the life you once lived?
+The great beyond is merciful enough to let you be reminded of past life
+=> END
+
+~ lose4
+You find yourself wanting to keep your memories. Why must it be so that you experience them one last time and then relinquish them? Why will you not be able to remember anything once you reach the afterlife? Is this even what you want?
+Is there a way to choose if you even want this?
+The great beyond is merciful enough to let you be reminded of past life
+=> END
+
+~ lose5
+There must be people wherever your home is. They must miss you, or at least, you hope they do. How cruel it must be, to miss someone so strongly, someone who may not even remember you.
+You try and try to remember them, but their faces or who they are never come to mind. You hope that one day, when it is their turn to make this drift, that they also forget, that the pain becomes replaced with peace and calm.
+The great beyond is merciful enough to let you be reminded of past life
 => END
 
 ~ memory_gone
@@ -20,69 +42,104 @@ And then it’s gone, consumed by oblivion.
 => END
 
 ~ memory_justice
-When you were young, you always played in the neighborhood playground. It had a small wooden ladder that led to a green slide, looping around twice, and the ground was made of woodchips.
-Your father would always take you down that green slide, and you would make the same gleeful noise every time you two slid to the bottom.
-The older kids always sat on the swings, and they were considered the “cool” ones, so the other kids your age would always fight over the opportunity to use the swings when they weren’t there.
-You want to be like the “cool” kids don’t you? Well, you never had much interest in the swings. You like playing on the slides more.
-Even when you grew older, you would always slide down the green slide once when you walked by the park. It reminded you of your father.
-Would you like to give up this memory?
-- Let it go ({{GameState.cost_text("justice")}})
-	do GameState.give_up("justice")
-- Keep it
-=> END
-
-~ memory_hermit
 One time when you were young you tried climbing the slide at the local playground from the bottom up, but because of the loop, you didn’t see someone else sliding down at that time.
 When you two collided you slid down backwards and landed on the woodchips, falling on your side. One of the parents nearby came over to make sure you were alright.
 You didn’t break anything, but you got a painful splinter that your parents scolded you for when you got home.
-When you were in middle school, the community board decided to remove the playground to make space to build a townhome.
-In the interval of two years, the playground and surrounding area turned into a 70 residence townhome.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("justice")}})
+	do GameState.give_up("justice")
+- Choose another memory
+=> END
+
+~ memory_hermit
+When you were young, you always played in the neighborhood playground. It had a small wooden ladder that led to a green slide, looping around twice, and the ground was made of woodchips.
+Your father would always take you down that green slide, and you would make the same gleeful noise every time you two slid to the bottom.
+The older kids always sat on the swings, and they were considered the “cool” ones, so the other kids your age would always fight over the opportunity to use the swings when they weren’t there. You want to be like the “cool” kids don’t you?
+Well, you never had much interest in the swings. You like playing on the slides more. Even when you grew older, you would always slide down the green slide once when you walked by the park. It reminded you of your father.
+When you were older, the community board decided to remove the playground to make space to build a townhome. In the interval of two years, the playground and surrounding area turned into a 70 residence townhome.
 Although you were disheartened that the place of your childhood memories were gone, you knew the buildings were built to provide homes for low to middle income families following the housing crisis.
 Sometimes pragmatism wins over sentimentalism. Sometimes you must leave your memories.
 Would you like to give up this memory?
 - Let it go ({{GameState.cost_text("hermit")}})
 	do GameState.give_up("hermit")
-- Keep it
+- Choose another memory
 => END
 
 ~ memory_strength
-Your father was a grand man. He was strong, large, imposing, but more than anything, he was so incredibly kind. Sometimes to his own detriment.
-He worked as a salesperson, selling small trinkets and wooden crafts. Why he got into this field is a complete mystery.
-He never made much money and given his personality, he lacked the eagerness and pushiness required for a salesperson, sometimes even giving the trinkets away for free.
-Your mother would often complain about his work and how he never made much money, yet he loved his job, and despite your mother’s complaints, she acknowledged his work and his passion.
+Your father was a grand man. He was strong, large, imposing, but more than anything, he was so incredibly kind. Sometimes to his own detriment. He worked as a salesperson, selling small trinkets and wooden crafts.
+Why he got into this field is a complete mystery. He never made much money and given his personality, he lacked the eagerness and pushiness required for a salesperson, sometimes even giving the trinkets away for free.
+Your mother would often complain how he never made much money. You have many memories of your mother complaining about his work while cooking pancakes for breakfast.
+Yet he loved his job, and despite your mother’s complaints, she acknowledged his work and his passion.
 Would you like to give up this memory?
 - Let it go ({{GameState.cost_text("strength")}})
 	do GameState.give_up("strength")
-- Keep it
+- Choose another memory
 => END
 
 ~ memory_wheel
-One time your father brought you a keychain from work. It was a small frog keychain, but during its production there was a manufacturing error, resulting in the left eye being smaller than the right.
+One time your father brought you a keychain from work. It was a small frog keychain, but during its production there was a manufacturing error, resulting in the left eye being slightly larger than the right.
 The company gave that batch away for free, and your father happened to end up with one. Despite the misprint, the little mismatch had a certain charm to it, its unevenness capturing your attention.
-For the next while you kept it on your backpack, hanging slightly left of centre, mimicking its deformity.
-One day, when pulling your books out from your backpack, you noticed the keychain was missing. You looked all around, around the floor, inside the backpack, inside the books.
-You trace your steps, but it was nowhere to be found. As you thought back to when it could have fallen off, a daunting feeling approached the corner of your mind.
-It might not have fallen off today. It could have gone missing many days ago, and you only realized until now.
-It probably fell off sometime when you were walking to or from school, without you the wiser, now lying someplace on the edge of the road.
+For the next while you kept it on your backpack, hanging slightly left of centre, mimicking its deformity. One day, when pulling your books out from your backpack, you noticed the keychain was missing.
+You looked all around, around the floor, inside the backpack, inside the books. You trace your steps, but it was nowhere to be found.
+As you thought back to when it could have fallen off, a daunting feeling approached the corner of your mind. It might not have fallen off today. It could have gone missing many days ago, and you only realized until now.
+It probably fell off sometime when you were walking to or from school, without you the wiser. Now it's probably lying someplace on the edge of the road, the ever slightly deformed frog.
+You felt sad, but there was nothing left to do, so you opened your books to do your homework; and pray someone, walking along the same path, would find it charming.
 Would you like to give up this memory?
 - Let it go ({{GameState.cost_text("wheel")}})
 	do GameState.give_up("wheel")
-- Keep it
+- Choose another memory
+=> END
+
+~ memory_hanged_man
+They said it was a neoplasm, the magnificent kind. Or something like that, you don’t quite remember. The doctors always used big words that you don’t understand, and they always acted very serious when they talked with your parents.
+It made you scared. You never liked it when the doctors came over. The nurses were kind though, they always played games and brought snacks for you.
+The hospital had a small playground for children your age, so you spent most of your time playing there. The other kids always looked at you weirdly though, probably because of your left eye. It was always a bit larger than your right.
+At first it wasn’t a big difference, but since you’ve entered the hospital, it has only gotten larger and larger. Near the end, they put some patch on top of it and your left eye went black.
+Some time later your right eye went black as well.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("hanged_man")}})
+	do GameState.give_up("hanged_man")
+- Choose another memory
 => END
 
 ~ memory_fool
-Waking up on a bright morning, being awoken by your mother, her soft voice ushering you out the door as she beckons you for breakfast.
-Your father typing away in his room as you sit down and nibble away.
-As far as you know, life is perfect, the two most important people in your life within your vision.
-=> END
-
-~ hanged_man
-PLACEHOLDER: You do nothing. The river carries you on.
+Waking up on a bright morning, being awoken by your mother, her soft voice ushering you out the door as she beckons you for the ready made pancakes.
+Your father typing away in his room, managing a new sales order, as you sit down and nibble away on your food. As far as you know, life is perfect, the two most important people in your life within your vision.
+Would you like to give up this memory?
+- Let it go ({{GameState.cost_text("fool")}})
+	do GameState.give_up("fool")
+- Choose another memory
 => END
 
 ~ death
-PLACEHOLDER: You could throw all your memories in the river Lethe.
+PLACEHOLDER\: You could throw all your memories in the river Lethe.
 - Throw everything in the river
 	do GameState.give_up_all()
 - Step back
+=> END
+
+~ ending_style
+You reach the after life. It’s soft and ethereal, as if you’ve returned to your home’s skies. You jump around on the soft puffs – clouds – you remember what they’re named.
+You lie down in one and let yourself become consumed in its tenderness. It’s like the nicest bed you’ve ever laid in.
+Every once in a while, you wake up and bounce around from cloud to cloud. You admire the beautiful colours and textures. You never feel bored and yet you never feel quite energetic either. You feel an everlasting sense of calm.
+=> END
+
+~ ending_sturdiness
+You reach the after life. You’re atop an old, sturdy tree, surrounded by equally sturdy trees. Looking below, you can see how far you are from the ground, and yet the fear of you falling down and hurting yourself never comes.
+Some trees are shorter than others, some taller, though you are not sure exactly how far they go.
+You are always able to look up and see the sky, and yet there seems like another tree you can climb, their branches reaching out at you as if encouraging you to take their path.
+You soon learn to swing on the vines, feeling the cool wind surrounding you as you do. The trees grow the sweetest and most filling berries, making you content. You never reach the grand skies and you don’t want to.
+The trees are your new home.
+=> END
+
+~ ending_size
+You’re in a neighbourhood of houses, however its houses are all empty. You don’t mind, however, it’s fun to explore! You enjoy exploring the neighbourhoods that span forever, finding empty parks, abandoned malls.
+It gets lonely after a while, though not for long. Soon, an older man appears, his hairs gray and back hunched over. Despite his appearance, though, he is nimble and able to easily catch up to you, even if you run.
+You don’t remember him, and he doesn’t remember you, all you know is that you can trust each other.
+Soon after, you both encounter an older woman, she seems to trust both you and the older man, and the three of you explore everything this world has to offer.
+You enjoy the outdoors as vines and other greenery seem to slowly consume all of the buildings, the three of you, as a family for eternity.
+=> END
+
+~ ending_death
+PLACEHOLDER\: You throw all your memories in the river Lethe.
 => END

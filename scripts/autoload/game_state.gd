@@ -4,13 +4,11 @@ extends Node
 
 signal stats_changed(stats: Dictionary)
 signal memory_lost(memory_id: String)
-signal memory_gained(memory_id: String)
 signal player_died
 
 const STATS: Array[String] = ["style", "sturdiness", "size"]
 ## Scale of the HUD bars. Stats themselves have no cap.
 const BAR_MAX = 150
-const FOOL_ID = "fool"
 
 var base: Dictionary = {}
 var held_memories: Array[String] = []
@@ -85,17 +83,6 @@ func give_up_all() -> void:
 func die() -> void:
 	died = true
 	player_died.emit()
-
-func fool_unlocked() -> bool:
-	return held_memories.is_empty()
-
-func take_fool() -> void:
-	if not fool_unlocked():
-		push_warning("GameState: the Fool is still locked")
-		return
-	held_memories.append(FOOL_ID)
-	memory_gained.emit(FOOL_ID)
-	stats_changed.emit(stats())
 
 ## Returns an id from endings.json. Ties go to the earlier stat in STATS.
 func pick_ending() -> String:

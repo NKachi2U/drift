@@ -14,6 +14,15 @@ func _ready() -> void:
 	for button in _buttons:
 		button.modulate.a = 0.0 if not _beginning_played else 1.0
 		button.disabled = not _beginning_played
+	var background_layer := CanvasLayer.new()
+	background_layer.layer = -1
+	add_child(background_layer)
+	var background := TextureRect.new()
+	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	background.texture = preload("res://assets/intro_fade.png")
+	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	background_layer.add_child(background)
 	var layer := CanvasLayer.new()
 	layer.layer = 10
 	add_child(layer)
