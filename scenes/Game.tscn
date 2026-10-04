@@ -8,11 +8,11 @@
 [ext_resource type="PackedScene" path="res://scenes/ui/choice_panel.tscn" id="9_choices"]
 [ext_resource type="Script" uid="uid://doghyldtmixsj" path="res://scripts/game/game_controller.gd" id="10_controller"]
 [ext_resource type="PackedScene" path="res://scenes/ui/deck_picker.tscn" id="11_picker"]
-[ext_resource type="PackedScene" path="res://scenes/ui/ending_screen.tscn" id="16_ending"]
 [ext_resource type="Texture2D" uid="uid://joo23d536fk6" path="res://assets/Untitled225_20261003142038.png" id="12_raft_person"]
 [ext_resource type="Texture2D" uid="uid://bgggtnnhrgglr" path="res://assets/Untitled225_20261003142024.png" id="13_raft_empty"]
 [ext_resource type="Script" uid="uid://esp6yjmc23fc" path="res://scripts/game/raft.gd" id="14_raft"]
 [ext_resource type="Script" uid="uid://8d102sdam0dc" path="res://scripts/game/portrait.gd" id="15_portrait"]
+[ext_resource type="PackedScene" uid="uid://m0s42anwrgka" path="res://scenes/ui/ending_screen.tscn" id="16_ending"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_raft_person"]
 atlas = ExtResource("12_raft_person")
@@ -25,7 +25,7 @@ region = Rect2(351, 560, 1480, 1432)
 [node name="Game" type="Control" unique_id=668591372]
 layout_mode = 3
 anchors_preset = 0
-mouse_filter = 2
+mouse_filter = 1
 script = ExtResource("1_qbsmt")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=765055246]
@@ -33,6 +33,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(28.665863, 16.29336)
+mouse_filter = 2
 texture = ExtResource("2_78awf")
 expand_mode = 1
 
@@ -53,6 +54,7 @@ offset_top = -64.83009
 offset_right = 24.24255
 offset_bottom = 4.4637604
 scale = Vector2(3.129973, 3.129973)
+mouse_filter = 2
 texture = ExtResource("3_s0nni")
 expand_mode = 5
 
@@ -77,10 +79,10 @@ portrait = NodePath("../Character")
 
 [node name="ChoicePanel" parent="." unique_id=450824961 instance=ExtResource("9_choices")]
 
-[node name="DeckPicker" parent="." node_paths=PackedStringArray("deck") instance=ExtResource("11_picker")]
+[node name="DeckPicker" parent="." unique_id=1501568470 node_paths=PackedStringArray("deck") instance=ExtResource("11_picker")]
 deck = NodePath("../main_screen/card_manager")
 
-[node name="EndingScreen" parent="." instance=ExtResource("16_ending")]
+[node name="EndingScreen" parent="." unique_id=963505364 instance=ExtResource("16_ending")]
 
 [node name="Controller" type="Node" parent="." unique_id=1273425624 node_paths=PackedStringArray("choices", "memory_picker", "ending_screen")]
 script = ExtResource("10_controller")
