@@ -55,6 +55,7 @@ func _on_start_pressed() -> void:
 		return
 	_starting = true
 	_buttons[0].disabled = true
+	Music.play("main")
 	var tween := create_tween()
 	tween.tween_property(_fade, "modulate:a", 1.0, 1.0)
 	await tween.finished

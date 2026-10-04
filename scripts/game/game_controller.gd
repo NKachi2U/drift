@@ -80,6 +80,7 @@ func _play_ending() -> void:
 	await _say("ending_" + id)
 	ending_screen.offer_return()
 	await ending_screen.closed
+	Music.stop()
 	get_tree().change_scene_to_file(MENU_SCENE)
 
 func _say(cue: String) -> void:
