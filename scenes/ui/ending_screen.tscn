@@ -1,20 +1,21 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://m0s42anwrgka"]
 
-[ext_resource type="Script" path="res://scripts/ui/ending_screen.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://hnv56labujep" path="res://scripts/ui/ending_screen.gd" id="1_script"]
 
-[node name="EndingScreen" type="CanvasLayer"]
+[node name="EndingScreen" type="CanvasLayer" unique_id=1892934111]
 layer = 5
 script = ExtResource("1_script")
 
-[node name="Root" type="Control" parent="."]
+[node name="Root" type="Control" parent="." unique_id=944783001]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
-[node name="Black" type="ColorRect" parent="Root"]
+[node name="Black" type="ColorRect" parent="Root" unique_id=1540106406]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Image" type="TextureRect" parent="Root"]
+[node name="Image" type="TextureRect" parent="Root" unique_id=354987034]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -35,7 +36,7 @@ mouse_filter = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Return" type="Button" parent="Root"]
+[node name="Return" type="Button" parent="Root" unique_id=1042006636]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
