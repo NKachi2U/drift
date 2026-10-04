@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bp3qu4lkl1x4i" path="res://scenes/main/card_table.tscn" id="2_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://bemm8l4d0p53w" path="res://assets/Untitled213_20261003132114.png" id="3_s0nni"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
+[ext_resource type="PackedScene" path="res://scenes/ui/choice_panel.tscn" id="9_choices"]
+[ext_resource type="Script" path="res://scripts/game/game_controller.gd" id="10_controller"]
 
 [node name="Game" type="Control" unique_id=668591372]
 layout_mode = 3
@@ -41,3 +43,9 @@ expand_mode = 5
 [node name="main_screen" parent="." unique_id=322347813 instance=ExtResource("2_cpr0p")]
 
 [node name="HUD" parent="." instance=ExtResource("8_hud")]
+
+[node name="ChoicePanel" parent="." instance=ExtResource("9_choices")]
+
+[node name="Controller" type="Node" parent="." node_paths=PackedStringArray("choices")]
+script = ExtResource("10_controller")
+choices = NodePath("../ChoicePanel")
