@@ -2,6 +2,7 @@ extends Control
 
 var _fade: TextureRect
 func _ready() -> void:
+	GameState.reset()
 	var layer := CanvasLayer.new()
 	layer.layer = 10
 	add_child(layer)

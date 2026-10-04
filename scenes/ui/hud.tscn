@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/stat_bar.tscn" id="1_bar"]
+[ext_resource type="Texture2D" uid="uid://db8gqloc2v50m" path="res://assets/style.png" id="2_style"]
+[ext_resource type="Texture2D" uid="uid://d1w3l3a3m5lkt" path="res://assets/sturdiness.png" id="3_sturdiness"]
+[ext_resource type="Texture2D" uid="uid://ywhkuvjoa5yv" path="res://assets/size.png" id="4_size"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_style"]
+atlas = ExtResource("2_style")
+region = Rect2(172, 379, 229, 229)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sturdiness"]
+atlas = ExtResource("3_sturdiness")
+region = Rect2(485, 377, 229, 228)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_size"]
+atlas = ExtResource("4_size")
+region = Rect2(488, 87, 229, 228)
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Stats" type="HBoxContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 14.0
+offset_bottom = 70.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Style" parent="Stats" instance=ExtResource("1_bar")]
+layout_mode = 2
+stat_name = "style"
+icon = SubResource("AtlasTexture_style")
+
+[node name="Sturdiness" parent="Stats" instance=ExtResource("1_bar")]
+layout_mode = 2
+stat_name = "sturdiness"
+icon = SubResource("AtlasTexture_sturdiness")
+
+[node name="Size" parent="Stats" instance=ExtResource("1_bar")]
+layout_mode = 2
+stat_name = "size"
+icon = SubResource("AtlasTexture_size")

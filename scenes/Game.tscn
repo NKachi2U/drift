@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ddunuqiakh5p7" path="res://assets/image.jpg" id="2_78awf"]
 [ext_resource type="PackedScene" uid="uid://bp3qu4lkl1x4i" path="res://scenes/main/card_table.tscn" id="2_cpr0p"]
 [ext_resource type="Texture2D" uid="uid://bemm8l4d0p53w" path="res://assets/Untitled213_20261003132114.png" id="3_s0nni"]
-[ext_resource type="Texture2D" uid="uid://db8gqloc2v50m" path="res://assets/style.png" id="5_400sg"]
-[ext_resource type="Texture2D" uid="uid://ywhkuvjoa5yv" path="res://assets/size.png" id="6_g4kob"]
-[ext_resource type="Texture2D" uid="uid://d1w3l3a3m5lkt" path="res://assets/sturdiness.png" id="7_qy1jj"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
 
 [node name="Game" type="Control" unique_id=668591372]
 layout_mode = 3
@@ -42,44 +40,4 @@ expand_mode = 5
 
 [node name="main_screen" parent="." unique_id=322347813 instance=ExtResource("2_cpr0p")]
 
-[node name="Control" type="Control" parent="." unique_id=176235108]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=2007987754]
-layout_mode = 0
-offset_left = 80.0
-offset_top = -106.0
-offset_right = 1350.0
-offset_bottom = 1672.0
-scale = Vector2(0.35999998, 0.35999998)
-texture = ExtResource("5_400sg")
-
-[node name="Control2" type="Control" parent="." unique_id=18055709]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect3" type="TextureRect" parent="Control2" unique_id=1677842159]
-layout_mode = 0
-offset_left = 591.0
-offset_top = -3.0
-offset_right = 1861.0
-offset_bottom = 1775.0
-scale = Vector2(0.35999998, 0.35999998)
-texture = ExtResource("6_g4kob")
-
-[node name="Control3" type="Control" parent="." unique_id=858433306]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect4" type="TextureRect" parent="Control3" unique_id=109358069]
-layout_mode = 0
-offset_left = 241.0
-offset_top = -106.00001
-offset_right = 1511.0
-offset_bottom = 1672.0
-scale = Vector2(0.35999998, 0.35999998)
-texture = ExtResource("7_qy1jj")
+[node name="HUD" parent="." instance=ExtResource("8_hud")]

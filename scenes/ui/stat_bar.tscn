@@ -1,0 +1,50 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/stat_bar.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bnfogwps1h1vu" path="res://assets/bar.png" id="2_fill"]
+[ext_resource type="Texture2D" uid="uid://dx2o45uf8hs8n" path="res://assets/empty_bar.png" id="3_frame"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frame"]
+atlas = ExtResource("3_frame")
+region = Rect2(268, 85, 540, 129)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fill"]
+atlas = ExtResource("2_fill")
+region = Rect2(277, 94, 522, 111)
+
+[node name="StatBar" type="HBoxContainer"]
+theme_override_constants/separation = 6
+script = ExtResource("1_script")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BarHolder" type="Control" parent="."]
+custom_minimum_size = Vector2(194, 46)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="Bar" type="TextureProgressBar" parent="BarHolder"]
+layout_mode = 0
+offset_right = 540.0
+offset_bottom = 129.0
+scale = Vector2(0.36, 0.36)
+mouse_filter = 2
+max_value = 150.0
+step = 0.1
+texture_over = SubResource("AtlasTexture_frame")
+texture_progress = SubResource("AtlasTexture_fill")
+texture_progress_offset = Vector2(9, 9)
+
+[node name="Value" type="Label" parent="."]
+custom_minimum_size = Vector2(44, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.2, 0.1, 0.3, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "0"

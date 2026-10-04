@@ -1,0 +1,29 @@
+[
+	{
+		"id": "relax",
+		"text": "You want to relax, easing into your journey, what do you decide to do?",
+		"choices": [
+			{ "label": "Watch the stars, noting the beautiful colours", "style": 7 },
+			{ "label": "Lean over the edge and run your hand through the water", "sturdiness": 7 },
+			{ "label": "Take a nap, enjoying the breeze", "size": 7 }
+		]
+	},
+	{
+		"id": "supplies",
+		"text": "You check your supplies, seeing what you can do to keep you busy.",
+		"choices": [
+			{ "label": "Illuminate your walls with your star lights", "style": 6, "sturdiness": -4 },
+			{ "label": "Make your boat more homey and comfortable", "sturdiness": 7, "size": -6 },
+			{ "label": "Build a makeshift lamp", "size": 7, "style": -3 }
+		]
+	},
+	{
+		"id": "fishing",
+		"text": "You decide to go fishing for stars, what do you do?",
+		"choices": [
+			{ "label": "Build a makeshift fishing rod", "sturdiness": 5, "size": -3 },
+			{ "label": "Reach into the water, hoping to catch one in your hand", "size": 2, "style": -1 },
+			{ "label": "Look for the one that shines the brightest, then try to swipe it as you pass by it", "style": 5, "sturdiness": -4 }
+		]
+	}
+]
