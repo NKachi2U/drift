@@ -6,6 +6,7 @@ signal hovered_off
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	get_parent().connect_card_signal(self)
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
