@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dacvauiqincnp"]
 
 [ext_resource type="Script" uid="uid://2yn4y7kngsow" path="res://scripts/GameStart.gd" id="1_qbsmt"]
+[ext_resource type="Texture2D" uid="uid://ddunuqiakh5p7" path="res://assets/image.jpg" id="2_78awf"]
 [ext_resource type="PackedScene" uid="uid://bp3qu4lkl1x4i" path="res://scenes/main/card_table.tscn" id="2_cpr0p"]
-[ext_resource type="Texture2D" uid="uid://buhrkhea2c0y4" path="res://assets/imagewbg.jpg" id="2_kiw3p"]
 [ext_resource type="Texture2D" uid="uid://bemm8l4d0p53w" path="res://assets/Untitled213_20261003132114.png" id="3_s0nni"]
 [ext_resource type="Texture2D" uid="uid://db8gqloc2v50m" path="res://assets/style.png" id="5_400sg"]
 [ext_resource type="Texture2D" uid="uid://ywhkuvjoa5yv" path="res://assets/size.png" id="6_g4kob"]
@@ -19,7 +19,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(28.665863, 16.29336)
-texture = ExtResource("2_kiw3p")
+texture = ExtResource("2_78awf")
 expand_mode = 1
 
 [node name="Character" type="Control" parent="." unique_id=23722726]
