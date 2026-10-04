@@ -3,6 +3,21 @@
 [ext_resource type="Script" uid="uid://dh85ec1mv67pg" path="res://scenes/main/card_table.gd" id="1_nvdju"]
 [ext_resource type="Script" uid="uid://dh0itoqrp8r4u" path="res://scenes/main/card_manager.gd" id="2_iv08x"]
 [ext_resource type="PackedScene" uid="uid://dewyjbketf0pq" path="res://scenes/main/card.tscn" id="3_tmwn7"]
+[ext_resource type="Script" uid="uid://cpi8x36spywbj" path="res://scenes/main/card.gd" id="4_iv08x"]
+[ext_resource type="Texture2D" uid="uid://ro5sotwsj5tk" path="res://assets/Cards/Justice.jpg" id="5_r42bn"]
+[ext_resource type="Texture2D" uid="uid://bcqrdypidpq2c" path="res://assets/Cards/Strength.jpg" id="6_aduos"]
+[ext_resource type="PackedScene" uid="uid://c2ktjum6xau1b" path="res://scenes/main/the_hermit.tscn" id="7_hm0h8"]
+[ext_resource type="Texture2D" uid="uid://bwx4tcjr45hh" path="res://assets/Cards/TheHangedMan.jpg" id="8_itefq"]
+[ext_resource type="Texture2D" uid="uid://1hlvwmp46cuf" path="res://assets/Cards/WheelOfFurtune.jpg" id="9_sw3wp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tmwn7"]
+load_path = "res://.godot/imported/TheFool.jpg-5f525692d3aee893dec4bd28b1bf77be.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oaelw"]
+size = Vector2(152, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxgk4"]
+size = Vector2(152, 212)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a3fm7"]
 load_path = "res://.godot/imported/fullscreen.png-44c18e904223c96eb72e4553145ba542.ctex"
@@ -13,8 +28,76 @@ script = ExtResource("1_nvdju")
 [node name="card_manager" type="Node2D" parent="." unique_id=1838844213]
 script = ExtResource("2_iv08x")
 
-[node name="Card" parent="card_manager" unique_id=1626991120 instance=ExtResource("3_tmwn7")]
-position = Vector2(346, 426)
+[node name="Death" parent="card_manager" unique_id=1626991120 instance=ExtResource("3_tmwn7")]
+position = Vector2(111, 422)
+
+[node name="TheFool" type="Node2D" parent="card_manager" unique_id=823915129]
+position = Vector2(489, 475)
+script = ExtResource("4_iv08x")
+
+[node name="Sprite2D" type="Sprite2D" parent="card_manager/TheFool" unique_id=1213209969]
+scale = Vector2(0.07, 0.07)
+texture = SubResource("CompressedTexture2D_tmwn7")
+
+[node name="Area2D" type="Area2D" parent="card_manager/TheFool" unique_id=469691197]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card_manager/TheFool/Area2D" unique_id=483249029]
+shape = SubResource("RectangleShape2D_oaelw")
+
+[node name="Justice" type="Node2D" parent="card_manager" unique_id=1488085332]
+position = Vector2(279, 187)
+script = ExtResource("4_iv08x")
+
+[node name="Sprite2D" type="Sprite2D" parent="card_manager/Justice" unique_id=381744490]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("5_r42bn")
+
+[node name="Area2D" type="Area2D" parent="card_manager/Justice" unique_id=134737970]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card_manager/Justice/Area2D" unique_id=1319199427]
+shape = SubResource("RectangleShape2D_fxgk4")
+
+[node name="Strength" type="Node2D" parent="card_manager" unique_id=1397107572]
+position = Vector2(928, 254)
+script = ExtResource("4_iv08x")
+
+[node name="Sprite2D" type="Sprite2D" parent="card_manager/Strength" unique_id=1868025586]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("6_aduos")
+
+[node name="Area2D" type="Area2D" parent="card_manager/Strength" unique_id=1307576602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card_manager/Strength/Area2D" unique_id=269857150]
+shape = SubResource("RectangleShape2D_fxgk4")
+
+[node name="TheHermit" parent="card_manager" unique_id=1987307897 instance=ExtResource("7_hm0h8")]
+position = Vector2(115, 375)
+
+[node name="TheHangedMan" type="Node2D" parent="card_manager" unique_id=2097987303]
+position = Vector2(572, 205)
+script = ExtResource("4_iv08x")
+
+[node name="Sprite2D" type="Sprite2D" parent="card_manager/TheHangedMan" unique_id=2107976690]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("8_itefq")
+
+[node name="Area2D" type="Area2D" parent="card_manager/TheHangedMan" unique_id=1313222344]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card_manager/TheHangedMan/Area2D" unique_id=558670359]
+shape = SubResource("RectangleShape2D_fxgk4")
+
+[node name="WheelOfFortune" type="Node2D" parent="card_manager" unique_id=123150509]
+position = Vector2(278, 485)
+script = ExtResource("4_iv08x")
+
+[node name="Sprite2D" type="Sprite2D" parent="card_manager/WheelOfFortune" unique_id=2071188025]
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_sw3wp")
+
+[node name="Area2D" type="Area2D" parent="card_manager/WheelOfFortune" unique_id=630604275]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="card_manager/WheelOfFortune/Area2D" unique_id=19487004]
+shape = SubResource("RectangleShape2D_fxgk4")
 
 [node name="toggle_fullscreen" type="TextureButton" parent="." unique_id=2030408851]
 offset_left = 1.0
@@ -24,4 +107,14 @@ offset_bottom = 178.0
 scale = Vector2(0.5, 0.5)
 texture_normal = SubResource("CompressedTexture2D_a3fm7")
 
+[connection signal="mouse_entered" from="card_manager/TheFool/Area2D" to="card_manager/TheFool" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="card_manager/TheFool/Area2D" to="card_manager/TheFool" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="card_manager/Justice/Area2D" to="card_manager/Justice" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="card_manager/Justice/Area2D" to="card_manager/Justice" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="card_manager/Strength/Area2D" to="card_manager/Strength" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="card_manager/Strength/Area2D" to="card_manager/Strength" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="card_manager/TheHangedMan/Area2D" to="card_manager/TheHangedMan" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="card_manager/TheHangedMan/Area2D" to="card_manager/TheHangedMan" method="_on_area_2d_mouse_exited"]
+[connection signal="mouse_entered" from="card_manager/WheelOfFortune/Area2D" to="card_manager/WheelOfFortune" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="card_manager/WheelOfFortune/Area2D" to="card_manager/WheelOfFortune" method="_on_area_2d_mouse_exited"]
 [connection signal="pressed" from="toggle_fullscreen" to="." method="_on_toggle_fullscreen_pressed"]

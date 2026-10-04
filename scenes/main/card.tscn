@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://dewyjbketf0pq"]
 
-[ext_resource type="Texture2D" uid="uid://c1f1pa1uh63ul" path="res://assets/IMG_0406.jpg" id="1_jdw65"]
 [ext_resource type="Script" uid="uid://cpi8x36spywbj" path="res://scenes/main/card.gd" id="1_xrggl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jdw65"]
+load_path = "res://.godot/imported/Death.jpg-e12fcf1f96211f3c87fea339e29b3532.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oaelw"]
 size = Vector2(152, 212)
@@ -12,7 +14,7 @@ script = ExtResource("1_xrggl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1213209969]
 scale = Vector2(0.07, 0.07)
-texture = ExtResource("1_jdw65")
+texture = SubResource("CompressedTexture2D_jdw65")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=469691197]
 
