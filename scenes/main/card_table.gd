@@ -4,6 +4,9 @@ var image_fullscreen = preload("res://assets/fullscreen.png")
 var image_windowed = preload("res://assets/windowed.png")
 
 func _on_toggle_fullscreen_pressed() -> void:
+	if Engine.is_embedded_in_editor():
+		push_warning("Fullscreen can't work while the game runs inside the editor's Game tab. Untick 'Embed Game on Next Play' in that tab's menu and run again.")
+		return
 	if is_fullscreen_mode_active():
 		do_windowed()
 	else:
@@ -12,9 +15,9 @@ func _on_toggle_fullscreen_pressed() -> void:
 
 func setup_toggle_icon():
 	if is_fullscreen_mode_active():
-		$toggle_fullscreen.texture_normal = image_windowed
+		$ui_layer/toggle_fullscreen.texture_normal = image_windowed
 	else:
-		$toggle_fullscreen.texture_normal = image_fullscreen
+		$ui_layer/toggle_fullscreen.texture_normal = image_fullscreen
 		
 
 func do_fullscreen() -> void:

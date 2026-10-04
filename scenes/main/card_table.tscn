@@ -99,7 +99,11 @@ texture = ExtResource("9_sw3wp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="card_manager/WheelOfFortune/Area2D" unique_id=19487004]
 shape = SubResource("RectangleShape2D_fxgk4")
 
-[node name="toggle_fullscreen" type="TextureButton" parent="." unique_id=2030408851]
+[node name="ui_layer" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="toggle_fullscreen" type="TextureButton" parent="ui_layer" unique_id=2030408851]
+focus_mode = 0
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 176.0
@@ -117,4 +121,4 @@ texture_normal = SubResource("CompressedTexture2D_a3fm7")
 [connection signal="mouse_exited" from="card_manager/TheHangedMan/Area2D" to="card_manager/TheHangedMan" method="_on_area_2d_mouse_exited"]
 [connection signal="mouse_entered" from="card_manager/WheelOfFortune/Area2D" to="card_manager/WheelOfFortune" method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="card_manager/WheelOfFortune/Area2D" to="card_manager/WheelOfFortune" method="_on_area_2d_mouse_exited"]
-[connection signal="pressed" from="toggle_fullscreen" to="." method="_on_toggle_fullscreen_pressed"]
+[connection signal="pressed" from="ui_layer/toggle_fullscreen" to="." method="_on_toggle_fullscreen_pressed"]
